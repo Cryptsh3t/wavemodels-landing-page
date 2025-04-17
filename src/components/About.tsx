@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const About = () => {
@@ -7,7 +8,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-gold text-3xl md:text-4xl font-bold mb-8">О нас</h2>
           <p className="text-xl mb-8 leading-relaxed">
-            <span className="text-gold font-bold">WAVEMODELS</span> — элитное модельное агентство, где каждая девушка чувствует себя важной, уверенной и уважаемой. Мы ценим индивидуальность и бережно относимся к эмоциям, состоянию и выбору каждой модели.
+            <span className="text-gold font-bold">WAVEMODELS</span> - элитное модельное агентство, где каждая девушка чувствует себя важной, уверенной и уважаемой. Мы ценим индивидуальность и бережно относимся к эмоциям, состоянию и выбору каждой модели.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
