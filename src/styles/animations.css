@@ -1,0 +1,93 @@
+
+/* Animations for the WAVEMODELS website */
+
+/* Fade in animation for elements */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stats counters animation */
+.stat-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stat-item.animate-in {
+  animation: animateIn 0.6s ease forwards;
+}
+
+@keyframes animateIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow effect for gold elements */
+.glow-on-hover:hover {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Slide in animation */
+.slide-in-right {
+  transform: translateX(50px);
+  opacity: 0;
+  animation: slideInRight 0.5s ease forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Gold text gradient animation */
+.text-gold-gradient {
+  background: linear-gradient(90deg, #FFD700, #FFF8DC, #FFD700);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Floating animation for elements */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Button hover animation */
+.btn-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-effect:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
