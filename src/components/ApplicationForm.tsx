@@ -91,17 +91,28 @@ const ApplicationForm = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/80 z-10"></div>
         <div className="relative w-full h-full">
-          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+          <div style={{ 
+            position: "absolute", 
+            top: 0, 
+            left: 0, 
+            width: "100%", 
+            height: "100%", 
+            overflow: "hidden" 
+          }}>
             <iframe
               src="https://player.vimeo.com/video/1076259702?h=8f35914296&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
               style={{
                 position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
+                top: "50%",
+                left: "50%",
+                minWidth: "100%",
+                minHeight: "100%",
+                width: "auto",
+                height: "auto",
+                transform: "translate(-50%, -50%)",
+                objectFit: "cover",
               }}
               title="WAVEMODELS Background"
             ></iframe>
