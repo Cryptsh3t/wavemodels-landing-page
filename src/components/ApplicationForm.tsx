@@ -171,7 +171,7 @@ const ApplicationForm = () => {
                     accept="image/*"
                     onChange={handleFileChange}
                     className="bg-dark/60 border-gold/30 text-white mt-1 
-                      file:bg-[#FFD700] file:text-dark file:border-1 file:border-gold file:rounded-sm 
+                      file:bg-[#FFD700] file:text-dark 
                       file:px-2 file:py-1 file:mr-2 file:text-sm file:overflow-hidden file:whitespace-nowrap 
                       file:max-w-[150px] file:truncate hover:file:bg-[#FEF7CD]"
                     placeholder="Выберите файл"
