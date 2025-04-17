@@ -97,7 +97,7 @@ const WhyUs = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {reasonsData.map((reason, index) => (
-            <div key={index} className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2">
+            <div key={index} className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
               <div className="text-5xl mb-4">{reason.emoji}</div>
               <h3 className="text-xl font-bold mb-2 text-white">{reason.title}</h3>
               <p className="text-white/80">{reason.description}</p>
@@ -110,7 +110,7 @@ const WhyUs = () => {
           
           <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {statsData.map((stat, index) => (
-              <div key={index} className="stat-item flex items-center opacity-0 transition-all duration-700" style={{ transitionDelay: `${index * 150}ms` }}>
+              <div key={index} className="stat-item flex items-center opacity-0 transition-all duration-700 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] p-4 rounded-lg" style={{ transitionDelay: `${index * 150}ms` }}>
                 <div className="text-4xl mr-4">{stat.icon}</div>
                 <div>
                   <div className="flex items-baseline">
