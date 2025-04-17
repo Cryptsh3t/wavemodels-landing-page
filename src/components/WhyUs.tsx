@@ -125,13 +125,18 @@ const WhyUs = () => {
         
         <div className="mb-20">
           <Carousel className="w-full max-w-5xl mx-auto">
-            <CarouselContent>
+            <CarouselContent className="flex items-stretch">
               {reasonsData.map((reason, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                  <div className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+                <CarouselItem 
+                  key={index} 
+                  className="md:basis-1/2 lg:basis-1/4 flex"
+                >
+                  <div className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] flex flex-col justify-between w-full">
                     <div className="text-5xl mb-4">{reason.emoji}</div>
-                    <h3 className="text-xl font-bold mb-2 text-white">{reason.title}</h3>
-                    <p className="text-white/80">{reason.description}</p>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-white">{reason.title}</h3>
+                      <p className="text-white/80">{reason.description}</p>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
@@ -146,21 +151,26 @@ const WhyUs = () => {
           
           <div ref={statsRef}>
             <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
+              <CarouselContent className="flex items-stretch">
                 {statsData.map((stat, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                    <div className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+                  <CarouselItem 
+                    key={index} 
+                    className="md:basis-1/2 lg:basis-1/4 flex"
+                  >
+                    <div className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] flex flex-col justify-between w-full">
                       <div className="text-5xl mb-4">{stat.icon}</div>
-                      {stat.isAnimated ? (
-                        <>
-                          <div id={`counter-${index}`} className="text-xl font-bold mb-2 text-gold">
-                            0
-                          </div>
+                      <div>
+                        {stat.isAnimated ? (
+                          <>
+                            <div id={`counter-${index}`} className="text-xl font-bold mb-2 text-gold">
+                              0
+                            </div>
+                            <p className="text-white/80">{stat.text}</p>
+                          </>
+                        ) : (
                           <p className="text-white/80">{stat.text}</p>
-                        </>
-                      ) : (
-                        <p className="text-white/80">{stat.text}</p>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </CarouselItem>
                 ))}
