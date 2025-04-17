@@ -20,7 +20,7 @@ const TESTIMONIALS_DATA = [
     name: "Лера",
     age: 25,
     city: "СПб",
-    text: "Теперь понимаю — это лучший выбор.",
+    text: "Теперь понимаю - это лучший выбор.",
     image: "https://images.pexels.com/photos/30351616/pexels-photo-30351616/free-photo-of-high-fashion-editorial-portrait-in-london-studio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -34,7 +34,7 @@ const TESTIMONIALS_DATA = [
     name: "Полина",
     age: 26,
     city: "Самара",
-    text: "Здесь заботятся — и о чувствах, и о финансах.",
+    text: "Здесь заботятся - и о чувствах, и о финансах.",
     image: "https://images.pexels.com/photos/594421/pexels-photo-594421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
