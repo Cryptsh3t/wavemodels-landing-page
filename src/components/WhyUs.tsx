@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 
 const reasonsData = [
@@ -108,19 +107,17 @@ const WhyUs = () => {
         <div className="mt-24">
           <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Почему нам доверяют</h2>
           
-          <div ref={statsRef} className="flex flex-nowrap overflow-x-auto gap-4 pb-4 lg:gap-8">
+          <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {statsData.map((stat, index) => (
-              <div 
-                key={index} 
-                className="stat-item flex-shrink-0 flex items-center opacity-0 transition-all duration-700 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] p-4 rounded-lg min-w-[250px] lg:min-w-0 lg:flex-1" 
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <div className="text-4xl mr-4 flex-shrink-0">{stat.icon}</div>
-                <div className="whitespace-nowrap">
-                  {stat.value && (
-                    <span className="text-2xl font-bold text-gold mr-2 whitespace-nowrap">{stat.value}</span>
-                  )}
-                  <span className="text-lg whitespace-nowrap">{stat.text}</span>
+              <div key={index} className="stat-item flex items-center opacity-0 transition-all duration-700 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] p-4 rounded-lg" style={{ transitionDelay: `${index * 150}ms` }}>
+                <div className="text-4xl mr-4">{stat.icon}</div>
+                <div>
+                  <div className="flex items-baseline">
+                    {stat.value && (
+                      <span className="text-2xl font-bold text-gold mr-2">{stat.value}</span>
+                    )}
+                    <span className="text-lg">{stat.text}</span>
+                  </div>
                 </div>
               </div>
             ))}
