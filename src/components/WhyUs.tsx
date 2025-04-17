@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 
 const reasonsData = [
@@ -47,7 +48,7 @@ const statsData = [
   {
     icon: "🔐",
     value: "",
-    text: "Соблюдаем полную конфиденциальность"
+    text: "Гарантируем полную защиту ваших персональных данных на всех этапах сотрудничества"
   },
   {
     icon: "💬",
@@ -109,16 +110,16 @@ const WhyUs = () => {
           
           <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {statsData.map((stat, index) => (
-              <div key={index} className="stat-item flex items-center opacity-0 transition-all duration-700 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] p-4 rounded-lg" style={{ transitionDelay: `${index * 150}ms` }}>
+              <div key={index} className="stat-item flex items-center justify-center opacity-0 transition-all duration-700 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] p-4 rounded-lg" style={{ transitionDelay: `${index * 150}ms` }}>
                 <div className="text-4xl mr-4">{stat.icon}</div>
-                <div>
-                  <div className="flex items-baseline">
+                <div className="flex-1">
+                  <div className="flex items-baseline justify-center">
                     {stat.value ? (
                       <span className="text-2xl font-bold text-gold mr-1">
                         {index === 1 ? `${stat.value}+ ₽` : stat.value}
                       </span>
                     ) : null}
-                    <span className="text-lg">{stat.text}</span>
+                    <span className="text-lg text-center">{stat.text}</span>
                   </div>
                 </div>
               </div>

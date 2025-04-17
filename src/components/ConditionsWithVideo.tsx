@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const ConditionsWithVideo = () => {
@@ -28,7 +27,7 @@ const ConditionsWithVideo = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-20">
-        <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Условия сотрудничества</h2>
+        <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Детали сотрудничества</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-dark/80 backdrop-blur-sm p-8 rounded-lg border border-gold/30 transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
@@ -73,7 +72,7 @@ const ConditionsWithVideo = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="#form" className="inline-block bg-gold hover:bg-gold/80 text-dark font-semibold py-3 px-8 rounded transition-all hover:shadow-[0_0_20px_5px_rgba(255,215,0,0.3)]">
+          <a href="#form" className="inline-block bg-[#FEF7CD] hover:bg-[#FEF7CD]/80 text-dark font-semibold py-3 px-8 rounded transition-all hover:shadow-[0_0_20px_5px_rgba(255,215,0,0.3)]">
             Узнать больше
           </a>
         </div>

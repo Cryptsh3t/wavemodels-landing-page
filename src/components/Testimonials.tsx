@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 const TESTIMONIALS_DATA = [
@@ -7,21 +6,21 @@ const TESTIMONIALS_DATA = [
     age: 24,
     city: "Москва",
     text: "Здесь к тебе относятся с уважением и теплотой.",
-    image: "https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://images.pexels.com/photos/18906154/pexels-photo-18906154/free-photo-of-k-a-u-s-b-y-d-m-p-h-o-t-o-s-t-u-d-i-o.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Кристина",
     age: 22,
     city: "Омск",
     text: "Я всегда получаю поддержку от агентства. Очень отзывчиво!",
-    image: "https://images.pexels.com/photos/2744193/pexels-photo-2744193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://images.pexels.com/photos/19443974/pexels-photo-19443974/free-photo-of-brunette-woman-in-fur-coat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Лера",
     age: 25,
     city: "СПб",
     text: "Теперь понимаю — это лучший выбор.",
-    image: "https://images.pexels.com/photos/245388/pexels-photo-245388.jpeg"
+    image: "https://images.pexels.com/photos/30351616/pexels-photo-30351616/free-photo-of-high-fashion-editorial-portrait-in-london-studio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Наташа",
