@@ -169,7 +169,7 @@ const Stories = () => {
                         {story.name}, {story.age}, {story.city}
                       </h3>
                       <p className="text-gold font-semibold mb-4 flex items-center">
-                        <span className="mr-2 text-sm">💼</span> {story.income}
+                        <span className="mr-2 text-xs">💼</span> {story.income}
                       </p>
                       <p className="text-white/90 italic mb-6">
                         "{story.quote}"
