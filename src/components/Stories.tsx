@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 
 const STORIES_DATA = [
@@ -120,69 +119,59 @@ const Stories = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Истории успеха</h2>
         
-        <div className="relative max-w-6xl mx-auto overflow-hidden"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {/* Navigation Arrows */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-gold transition-colors duration-300 bg-black/50 rounded-full p-2 md:p-3"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-gold transition-colors duration-300 bg-black/50 rounded-full p-2 md:p-3"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-          
-          {/* Stories Container */}
-          <div 
-            ref={containerRef}
-            className="flex gap-6 transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-          >
+        <div className="max-w-5xl mx-auto relative">
+          {/* Main Stories Slider */}
+          <div className="relative min-h-[380px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
             {STORIES_DATA.map((story, index) => (
               <div
                 key={index}
-                className="min-w-full sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] flex-shrink-0 bg-dark/40 rounded-lg overflow-hidden border border-gold/20"
+                className={`absolute inset-0 flex flex-col md:flex-row transition-all duration-700 ease-in-out ${
+                  activeIndex === index 
+                    ? "opacity-100 translate-x-0" 
+                    : activeIndex > index 
+                      ? "opacity-0 -translate-x-full" 
+                      : "opacity-0 translate-x-full"
+                }`}
               >
-                <div className="flex flex-col md:flex-row h-full">
-                  <div className="md:w-2/5 h-60 md:h-auto relative">
-                    <img 
-                      src={story.image} 
-                      alt={`${story.name} from ${story.city}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="md:w-3/5 p-6 flex flex-col">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-1">
-                        {story.name}, {story.age}, {story.city}
-                      </h3>
-                      <p className="text-gold font-semibold mb-4 flex items-center">
-                        <span className="mr-2 text-xs">💼</span> {story.income}
-                      </p>
-                      <p className="text-white/90 italic mb-6">
-                        "{story.quote}"
-                      </p>
-                    </div>
-                  </div>
+                <div className="md:w-1/3 h-64 md:h-auto">
+                  <img 
+                    src={story.image} 
+                    alt={`${story.name} from ${story.city}`} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="md:w-2/3 p-8 flex flex-col justify-center">
+                  <p className="text-xl mb-6 italic">"{story.quote}"</p>
+                  <h3 className="text-lg font-semibold">
+                    {story.name}, {story.age}, {story.city}
+                  </h3>
                 </div>
               </div>
             ))}
           </div>
           
+          {/* Navigation */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between z-10 px-4">
+            <button
+              onClick={handlePrev}
+              className="bg-black/70 hover:bg-gold/90 transition-colors duration-300 rounded-full p-2 text-white hover:text-dark"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button
+              onClick={handleNext}
+              className="bg-black/70 hover:bg-gold/90 transition-colors duration-300 rounded-full p-2 text-white hover:text-dark"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+          
           {/* Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-6 space-x-2">
             {STORIES_DATA.map((_, index) => (
               <button
                 key={index}
