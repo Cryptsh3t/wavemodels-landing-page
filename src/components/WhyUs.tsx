@@ -115,7 +115,7 @@ const WhyUs = () => {
                   <div className="flex items-baseline">
                     {stat.value ? (
                       <span className="text-2xl font-bold text-gold mr-1">
-                        {index === 1 ? `${stat.value}+₽` : stat.value}
+                        {index === 1 ? `${stat.value}+ ₽` : stat.value}
                       </span>
                     ) : null}
                     <span className="text-lg">{stat.text}</span>
