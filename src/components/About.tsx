@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const About = () => {
@@ -21,7 +20,7 @@ const About = () => {
             <div className="bg-dark border border-gold/30 p-6 rounded-lg hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all duration-300">
               <div className="text-gold text-3xl mb-4">🔐</div>
               <h3 className="text-xl font-semibold mb-2">Безопасность и конфиденциальность</h3>
-              <p className="text-sm text-light/80 font-semibold">Гарантируем полную анонимность и защиту ваших персональных данных на всех этапах сотрудничества.</p>
+              <p className="text-sm text-light/80 font-semibold">Гарантируем полную защиту ваших персональных данных на всех этапах сотрудничества.</p>
             </div>
             
             <div className="bg-dark border border-gold/30 p-6 rounded-lg hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all duration-300">
