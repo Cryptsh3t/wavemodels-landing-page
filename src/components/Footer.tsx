@@ -7,7 +7,7 @@ const Footer = () => {
     { name: "Условия", href: "#conditions" },
     { name: "Почему мы", href: "#why-us" },
     { name: "Отзывы", href: "#testimonials" },
-    { name: "FAQ", href: "#" },
+    { name: "FAQ", href: "#faq" },
     { name: "Анкета", href: "#form" },
   ];
 
