@@ -31,7 +31,7 @@ const statsData = [
   },
   {
     icon: "💸",
-    value: "65 000 000+", // Separate the ₽ from the value
+    value: "65 000 000",
     text: "выплачено с 2020 года"
   },
   {
@@ -114,9 +114,10 @@ const WhyUs = () => {
                 <div>
                   <div className="flex items-baseline">
                     {stat.value && (
-                      <span className="text-2xl font-bold text-gold mr-1">{stat.value}+</span>
+                      <span className="text-2xl font-bold text-gold mr-1">
+                        {stat.value}{index === 1 ? '+ ₽' : ''}
+                      </span>
                     )}
-                    {index === 1 && <span className="text-2xl font-bold text-gold mr-1">₽</span>}
                     <span className="text-lg">{stat.text}</span>
                   </div>
                 </div>
