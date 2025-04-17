@@ -7,7 +7,7 @@ const STORIES_DATA = [
     age: 23,
     city: "Москва",
     income: "120 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "Здесь мне дали мне возможность раскрыть свой потенциал и обрести финансовую независимость.",
     image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -15,7 +15,7 @@ const STORIES_DATA = [
     age: 22,
     city: "Казань",
     income: "180 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "Гибкий график и комфортные условия позволяют мне совмещать работу с учебой и личной жизнью.",
     image: "https://images.pexels.com/photos/921646/pexels-photo-921646.jpeg"
   },
   {
@@ -23,7 +23,7 @@ const STORIES_DATA = [
     age: 21,
     city: "СПб",
     income: "240 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут со всем, здесь никого не осуждают.",
     image: "https://images.pexels.com/photos/60712/fashion-girl-sexy-women-60712.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
@@ -31,7 +31,7 @@ const STORIES_DATA = [
     age: 25,
     city: "Сочи",
     income: "310 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "Наконец-то нашла агентство, где уважают личные границы и создают все условия для успеха, где есть карьерный рост.",
     image: "https://images.pexels.com/photos/31182152/pexels-photo-31182152/free-photo-of-elegant-fashion-portrait-with-studio-lighting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -39,7 +39,7 @@ const STORIES_DATA = [
     age: 24,
     city: "Новосибирск",
     income: "140 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "Всего за два месяца работы в WAVEMODELS я смогла полностью погасить кредиты и начать копить на квартиру.",
     image: "https://images.pexels.com/photos/15579743/pexels-photo-15579743/free-photo-of-model-with-glamour-makeup.jpeg"
   },
   {
@@ -47,7 +47,7 @@ const STORIES_DATA = [
     age: 22,
     city: "Екатеринбург",
     income: "200 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "Профессиональная команда, прозрачные условия для работы и хорошие своевременные выплаты - всё это WAVEMODELS.",
     image: "https://images.pexels.com/photos/30698454/pexels-photo-30698454/free-photo-with-seashell-aesthetics.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -55,7 +55,7 @@ const STORIES_DATA = [
     age: 26,
     city: "Краснодар",
     income: "270 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "Благодаря WAVEMODELS я обрела уверенность в себе и финансовую стабильность, также нашла себе новых друзей.",
     image: "https://images.pexels.com/photos/7354819/pexels-photo-7354819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -63,7 +63,7 @@ const STORIES_DATA = [
     age: 21,
     city: "Воронеж",
     income: "360 000 ₽/мес",
-    quote: "Здесь настоящая семейная атмосфера, всегда поддержат и помогут.",
+    quote: "В WAVEMODELS я нашла не только высокооплачиваемую работу, но и настоящих друзей среди коллег.",
     image: "https://images.pexels.com/photos/13448790/pexels-photo-13448790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ];
