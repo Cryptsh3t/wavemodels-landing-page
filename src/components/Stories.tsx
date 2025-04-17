@@ -8,7 +8,7 @@ const STORIES_DATA = [
     city: "Москва",
     income: "120 000 ₽/мес",
     quote: "WAVEMODELS дали мне возможность раскрыть свой потенциал и обрести финансовую независимость.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/17474640-9787-4e03-97b2-e5134ab58cd0.png"
   },
   {
     name: "Аня",
@@ -16,7 +16,7 @@ const STORIES_DATA = [
     city: "Казань",
     income: "180 000 ₽/мес",
     quote: "Гибкий график и комфортные условия позволяют мне совмещать работу с учебой и личной жизнью.",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/c3730e74-63a9-4eba-a868-1beaa9b1204e.png"
   },
   {
     name: "Вика",
@@ -24,7 +24,7 @@ const STORIES_DATA = [
     city: "СПб",
     income: "240 000 ₽/мес",
     quote: "В WAVEMODELS настоящая семейная атмосфера, всегда поддержат и помогут.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/63fb957a-4a1b-4cc1-aa23-13d11a258605.png"
   },
   {
     name: "Алина",
@@ -32,7 +32,7 @@ const STORIES_DATA = [
     city: "Сочи",
     income: "310 000 ₽/мес",
     quote: "Наконец-то нашла агентство, где уважают личные границы и создают все условия для успеха.",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/e9eaff59-74d3-4dbd-abf4-a41e11f3dcaf.png"
   },
   {
     name: "Мария",
@@ -40,7 +40,7 @@ const STORIES_DATA = [
     city: "Новосибирск",
     income: "140 000 ₽/мес",
     quote: "Всего за два месяца работы в WAVEMODELS я смогла полностью погасить кредиты и начать копить на квартиру.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/38a8c311-b6c9-4a0f-9fec-310585f02abc.png"
   },
   {
     name: "Диана",
@@ -48,7 +48,7 @@ const STORIES_DATA = [
     city: "Екатеринбург",
     income: "200 000 ₽/мес",
     quote: "Профессиональная команда, прозрачные условия и своевременные выплаты — всё это WAVEMODELS.",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/3bb68e43-92a3-48ae-980e-a5a7397b84df.png"
   },
   {
     name: "София",
@@ -56,7 +56,7 @@ const STORIES_DATA = [
     city: "Краснодар",
     income: "270 000 ₽/мес",
     quote: "Благодаря WAVEMODELS я обрела уверенность в себе и финансовую стабильность.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/96e84418-cf4b-4fd4-838e-b0eafeeeeab9.png"
   },
   {
     name: "Ника",
@@ -64,7 +64,7 @@ const STORIES_DATA = [
     city: "Воронеж",
     income: "360 000 ₽/мес",
     quote: "В WAVEMODELS я нашла не только высокооплачиваемую работу, но и настоящих друзей среди коллег.",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=600&h=700"
+    image: "/public/lovable-uploads/e71aeb4f-9948-4dad-b1b5-b9d755678470.png"
   }
 ];
 
