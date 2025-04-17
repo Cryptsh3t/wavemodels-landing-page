@@ -1,6 +1,13 @@
 
 import React, { useEffect, useRef } from "react";
 import { CountUp } from 'countup.js';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const reasonsData = [
   {
@@ -116,33 +123,51 @@ const WhyUs = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Почему выбирают нас</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {reasonsData.map((reason, index) => (
-            <div key={index} className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
-              <div className="text-5xl mb-4">{reason.emoji}</div>
-              <h3 className="text-xl font-bold mb-2 text-white">{reason.title}</h3>
-              <p className="text-white/80">{reason.description}</p>
-            </div>
-          ))}
+        <div className="mb-20">
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {reasonsData.map((reason, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
+                  <div className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+                    <div className="text-5xl mb-4">{reason.emoji}</div>
+                    <h3 className="text-xl font-bold mb-2 text-white">{reason.title}</h3>
+                    <p className="text-white/80">{reason.description}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
         
         <div className="mt-24">
           <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Почему нам доверяют</h2>
           
-          <div ref={statsRef} className="flex items-center justify-between flex-nowrap space-x-4 overflow-x-auto pb-4">
-            {statsData.map((stat, index) => (
-              <div key={index} className="flex items-center whitespace-nowrap flex-shrink-0 bg-dark/50 px-4 py-3 rounded-lg hover:bg-dark/60 transition-colors">
-                <span className="text-3xl mr-3">{stat.icon}</span>
-                <div className="flex items-baseline">
-                  {stat.isAnimated && (
-                    <span id={`counter-${index}`} className="text-xl font-bold text-gold mr-1">
-                      0
-                    </span>
-                  )}
-                  <span className="text-sm">{stat.text}</span>
-                </div>
-              </div>
-            ))}
+          <div ref={statsRef}>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {statsData.map((stat, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
+                    <div className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+                      <div className="text-5xl mb-4">{stat.icon}</div>
+                      {stat.isAnimated ? (
+                        <>
+                          <div id={`counter-${index}`} className="text-xl font-bold mb-2 text-gold">
+                            0
+                          </div>
+                          <p className="text-white/80">{stat.text}</p>
+                        </>
+                      ) : (
+                        <p className="text-white/80">{stat.text}</p>
+                      )}
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </div>
