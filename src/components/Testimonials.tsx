@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 
 const TESTIMONIALS_DATA = [
@@ -34,7 +35,7 @@ const TESTIMONIALS_DATA = [
     age: 26,
     city: "Самара",
     text: "Здесь заботятся — и о чувствах, и о финансах.",
-    image: "https://images.pexels.com/photos/19811912/pexels-photo-19811912/free-photo-of-woman-portrait-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://images.pexels.com/photos/594421/pexels-photo-594421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Эля",
