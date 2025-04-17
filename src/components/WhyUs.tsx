@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 
 const reasonsData = [
@@ -27,7 +26,7 @@ const reasonsData = [
 const statsData = [
   {
     icon: "👩‍🦱",
-    value: "340+",
+    value: "1890+",
     text: "девушек уже работают с нами"
   },
   {
