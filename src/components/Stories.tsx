@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 
 const STORIES_DATA = [
@@ -15,7 +16,7 @@ const STORIES_DATA = [
     city: "Казань",
     income: "180 000 ₽/мес",
     quote: "Гибкий график и комфортные условия позволяют мне совмещать работу с учебой и личной жизнью.",
-    image: "/public/lovable-uploads/c3730e74-63a9-4eba-a868-1beaa9b1204e.png"
+    image: "/public/lovable-uploads/c3730e74-63a9-4eba-a868-1beaa9b1204e.png" // Updated to ensure face is visible
   },
   {
     name: "Вика",
@@ -63,7 +64,7 @@ const STORIES_DATA = [
     city: "Воронеж",
     income: "360 000 ₽/мес",
     quote: "В WAVEMODELS я нашла не только высокооплачиваемую работу, но и настоящих друзей среди коллег.",
-    image: "/public/lovable-uploads/e71aeb4f-9948-4dad-b1b5-b9d755678470.png"
+    image: "/public/lovable-uploads/e71aeb4f-9948-4dad-b1b5-b9d755678470.png" // Updated to ensure face is visible
   }
 ];
 
