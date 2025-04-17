@@ -43,7 +43,11 @@ const Index = () => {
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      // Clean up the script when component unmounts
+      const existingScript = document.querySelector('script[src="https://player.vimeo.com/api/player.js"]');
+      if (existingScript && document.body.contains(existingScript)) {
+        document.body.removeChild(existingScript);
+      }
     };
   }, []);
 
