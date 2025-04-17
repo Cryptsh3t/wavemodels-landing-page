@@ -37,7 +37,7 @@ const ConditionsWithVideo = () => {
               </div>
               <h3 className="text-2xl font-semibold">Высокий доход</h3>
             </div>
-            <p className="text-light/90">от $1500/мес</p>
+            <p className="text-light/90">от $800/мес</p>
           </div>
           
           <div className="bg-dark/80 backdrop-blur-sm p-8 rounded-lg border border-gold/30 transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -15,7 +14,7 @@ const Conditions = () => {
             <div className="bg-dark/60 backdrop-blur-sm p-8 rounded-lg border border-gold/20 hover:border-gold/40 transition-all duration-300">
               <div className="text-gold text-4xl mb-4">💰</div>
               <h3 className="text-2xl font-semibold mb-3">Высокий доход</h3>
-              <p className="text-xl opacity-90">от $1500/мес</p>
+              <p className="text-xl opacity-90">от $800/мес</p>
             </div>
             
             <div className="bg-dark/60 backdrop-blur-sm p-8 rounded-lg border border-gold/20 hover:border-gold/40 transition-all duration-300">
