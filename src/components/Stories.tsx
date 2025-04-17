@@ -130,7 +130,7 @@ const Stories = () => {
             onClick={handlePrev}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-gold transition-colors duration-300 bg-black/50 rounded-full p-2 md:p-3"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
@@ -139,7 +139,7 @@ const Stories = () => {
             onClick={handleNext}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-gold transition-colors duration-300 bg-black/50 rounded-full p-2 md:p-3"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
@@ -169,7 +169,7 @@ const Stories = () => {
                         {story.name}, {story.age}, {story.city}
                       </h3>
                       <p className="text-gold font-semibold mb-4 flex items-center">
-                        <span className="mr-2">💼</span> {story.income}
+                        <span className="mr-2 text-sm">💼</span> {story.income}
                       </p>
                       <p className="text-white/90 italic mb-6">
                         "{story.quote}"

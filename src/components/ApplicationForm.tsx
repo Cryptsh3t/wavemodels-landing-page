@@ -212,7 +212,7 @@ const ApplicationForm = () => {
                   <Button
                     type="submit"
                     disabled={loading}
-                    className="bg-[#e53935] hover:bg-[#c62828] text-white text-lg py-6 px-8 font-semibold rounded-md transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(229,57,53,0.3)]"
+                    className="bg-gold hover:bg-gold/80 text-dark text-lg py-6 px-8 font-semibold rounded-md transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(255,215,0,0.3)]"
                   >
                     {loading ? "Отправка..." : "Заполнить"}
                   </Button>

@@ -31,7 +31,7 @@
 
 /* Glow effect for gold elements */
 .glow-on-hover:hover {
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
   transition: box-shadow 0.3s ease;
 }
 
@@ -89,5 +89,5 @@
 
 .btn-hover-effect:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
 }
