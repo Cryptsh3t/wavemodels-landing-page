@@ -21,11 +21,13 @@ const About = () => {
             <div className="bg-dark border border-gold/30 p-6 rounded-lg hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all duration-300">
               <div className="text-gold text-3xl mb-4">🔐</div>
               <h3 className="text-xl font-semibold mb-2">Безопасность и конфиденциальность</h3>
+              <p className="text-sm text-light/80">На каждом этапе модельного пути — от первых фотосессий до уверенного заработка. Мы сопровождаем, обучаем и поддерживаем вас в мире моды 24/7.</p>
             </div>
             
             <div className="bg-dark border border-gold/30 p-6 rounded-lg hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] transition-all duration-300">
               <div className="text-gold text-3xl mb-4">📜</div>
               <h3 className="text-xl font-semibold mb-2">Прозрачные условия, никаких скрытых требований</h3>
+              <p className="text-sm text-light/80">На каждом этапе модельного пути — от первых фотосессий до уверенного заработка. Мы сопровождаем, обучаем и поддерживаем вас в мире моды 24/7.</p>
             </div>
           </div>
         </div>
