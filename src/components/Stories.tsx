@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 
 const STORIES_DATA = [
@@ -7,7 +8,7 @@ const STORIES_DATA = [
     city: "Москва",
     income: "120 000 ₽/мес",
     quote: "WAVEMODELS дали мне возможность раскрыть свой потенциал и обрести финансовую независимость.",
-    image: "/public/lovable-uploads/17474640-9787-4e03-97b2-e5134ab58cd0.png"
+    image: "https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Аня",
@@ -15,7 +16,7 @@ const STORIES_DATA = [
     city: "Казань",
     income: "180 000 ₽/мес",
     quote: "Гибкий график и комфортные условия позволяют мне совмещать работу с учебой и личной жизнью.",
-    image: "/public/lovable-uploads/67380019-8e4e-40eb-9371-14399cfb80d8.png"
+    image: "https://images.pexels.com/photos/921646/pexels-photo-921646.jpeg"
   },
   {
     name: "Вика",
@@ -23,7 +24,7 @@ const STORIES_DATA = [
     city: "СПб",
     income: "240 000 ₽/мес",
     quote: "В WAVEMODELS настоящая семейная атмосфера, всегда поддержат и помогут.",
-    image: "/public/lovable-uploads/888de4dc-f3db-4b5f-800e-8ba91678de0b.png"
+    image: "https://images.pexels.com/photos/60712/fashion-girl-sexy-women-60712.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     name: "Алина",
@@ -31,7 +32,7 @@ const STORIES_DATA = [
     city: "Сочи",
     income: "310 000 ₽/мес",
     quote: "Наконец-то нашла агентство, где уважают личные границы и создают все условия для успеха.",
-    image: "/public/lovable-uploads/e9eaff59-74d3-4dbd-abf4-a41e11f3dcaf.png"
+    image: "https://images.pexels.com/photos/31182152/pexels-photo-31182152/free-photo-of-elegant-fashion-portrait-with-studio-lighting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Мария",
@@ -39,7 +40,7 @@ const STORIES_DATA = [
     city: "Новосибирск",
     income: "140 000 ₽/мес",
     quote: "Всего за два месяца работы в WAVEMODELS я смогла полностью погасить кредиты и начать копить на квартиру.",
-    image: "/public/lovable-uploads/38a8c311-b6c9-4a0f-9fec-310585f02abc.png"
+    image: "https://images.pexels.com/photos/15579743/pexels-photo-15579743/free-photo-of-model-with-glamour-makeup.jpeg"
   },
   {
     name: "Диана",
@@ -47,7 +48,7 @@ const STORIES_DATA = [
     city: "Екатеринбург",
     income: "200 000 ₽/мес",
     quote: "Профессиональная команда, прозрачные условия и своевременные выплаты — всё это WAVEMODELS.",
-    image: "/public/lovable-uploads/3bb68e43-92a3-48ae-980e-a5a7397b84df.png"
+    image: "https://images.pexels.com/photos/30698454/pexels-photo-30698454/free-photo-of-creative-fashion-portrait-with-seashell-aesthetics.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "София",
@@ -55,7 +56,7 @@ const STORIES_DATA = [
     city: "Краснодар",
     income: "270 000 ₽/мес",
     quote: "Благодаря WAVEMODELS я обрела уверенность в себе и финансовую стабильность.",
-    image: "/public/lovable-uploads/96e84418-cf4b-4fd4-838e-b0eafeeeeab9.png"
+    image: "https://images.pexels.com/photos/7354819/pexels-photo-7354819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Ника",
@@ -63,7 +64,7 @@ const STORIES_DATA = [
     city: "Воронеж",
     income: "360 000 ₽/мес",
     quote: "В WAVEMODELS я нашла не только высокооплачиваемую работу, но и настоящих друзей среди коллег.",
-    image: "/public/lovable-uploads/4433009a-8917-44dd-8cfa-9a099fe0e255.png"
+    image: "https://images.pexels.com/photos/13448790/pexels-photo-13448790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ];
 
@@ -121,7 +122,7 @@ const Stories = () => {
         
         <div className="max-w-5xl mx-auto relative">
           {/* Main Stories Slider */}
-          <div className="relative min-h-[380px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
+          <div className="relative min-h-[420px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
             {STORIES_DATA.map((story, index) => (
               <div
                 key={index}
@@ -142,9 +143,15 @@ const Stories = () => {
                 </div>
                 <div className="md:w-2/3 p-8 flex flex-col justify-center">
                   <p className="text-xl mb-6 italic">"{story.quote}"</p>
-                  <h3 className="text-lg font-semibold">
-                    {story.name}, {story.age}, {story.city}
-                  </h3>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold">
+                      {story.name}, {story.age}, {story.city}
+                    </h3>
+                    <p className="text-gold font-bold flex items-center">
+                      <span className="mr-2">💼</span>
+                      {story.income}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
