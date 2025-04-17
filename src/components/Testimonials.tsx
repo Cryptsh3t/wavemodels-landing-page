@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 const TESTIMONIALS_DATA = [
@@ -7,42 +6,42 @@ const TESTIMONIALS_DATA = [
     age: 24,
     city: "Москва",
     text: "Здесь к тебе относятся с уважением и теплотой.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Кристина",
     age: 22,
     city: "Омск",
     text: "Я всегда получаю поддержку от агентства. Очень отзывчиво!",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.pexels.com/photos/2744193/pexels-photo-2744193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Лера",
     age: 25,
     city: "СПб",
     text: "Теперь понимаю — это лучший выбор.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.pexels.com/photos/245388/pexels-photo-245388.jpeg"
   },
   {
     name: "Наташа",
     age: 23,
     city: "Тюмень",
     text: "Безопасно, стабильно, с поддержкой. Хорошая команда.",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.pexels.com/photos/19811912/pexels-photo-19811912/free-photo-of-woman-portrait-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Полина",
     age: 26,
     city: "Самара",
     text: "Здесь заботятся — и о чувствах, и о финансах.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.pexels.com/photos/19811912/pexels-photo-19811912/free-photo-of-woman-portrait-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "Эля",
     age: 20,
     city: "Хабаровск",
     text: "Совмещаю с учёбой, гибкий график. Работаю с удовольствием!",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.pexels.com/photos/18373300/pexels-photo-18373300/free-photo-of-a-young-brunette-with-bangs-wearing-an-off-shoulder-blouse.jpeg"
   }
 ];
 
