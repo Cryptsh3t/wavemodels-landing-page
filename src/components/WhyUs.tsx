@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 
 const reasonsData = [
@@ -31,7 +32,7 @@ const statsData = [
   },
   {
     icon: "💸",
-    value: "65 000 000+₽",
+    value: "65 000 000+₽", // Modified to include ₽ in the value
     text: "выплачено с 2020 года"
   },
   {
