@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 
 const reasonsData = [
@@ -114,13 +113,9 @@ const WhyUs = () => {
                 <div className="text-4xl mr-4">{stat.icon}</div>
                 <div>
                   <div className="flex items-baseline">
-                    {stat.value && index === 1 ? (
+                    {stat.value ? (
                       <span className="text-2xl font-bold text-gold mr-1">
-                        {stat.value}+ ₽
-                      </span>
-                    ) : stat.value ? (
-                      <span className="text-2xl font-bold text-gold mr-1">
-                        {stat.value}
+                        {stat.value}{stat.value && index === 1 ? '+ ₽' : ''}
                       </span>
                     ) : null}
                     <span className="text-lg">{stat.text}</span>
