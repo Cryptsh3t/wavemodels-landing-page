@@ -86,8 +86,28 @@ const ApplicationForm = () => {
   };
 
   return (
-    <section id="form" className="py-20 bg-black text-light relative">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80')] bg-fixed bg-cover bg-center opacity-5"></div>
+    <section id="form" className="py-20 text-light relative">
+      {/* Video Background with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/80 z-10"></div>
+        <div className="relative w-full h-full">
+          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+            <iframe
+              src="https://player.vimeo.com/video/1076259702?h=8f35914296&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+              }}
+              title="WAVEMODELS Background"
+            ></iframe>
+          </div>
+        </div>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto">
