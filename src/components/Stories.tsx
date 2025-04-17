@@ -122,7 +122,13 @@ const Stories = () => {
         
         <div className="max-w-5xl mx-auto relative">
           {/* Main Stories Slider */}
-          <div className="relative min-h-[420px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
+          <div 
+            className="relative min-h-[420px] overflow-hidden rounded-xl bg-black/50 border border-gold/20"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            ref={containerRef}
+          >
             {STORIES_DATA.map((story, index) => (
               <div
                 key={index}
@@ -196,4 +202,3 @@ const Stories = () => {
 };
 
 export default Stories;
-
