@@ -41,7 +41,6 @@ const ApplicationForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form
     if (!formData.fullName || !formData.city || !formData.whatsapp || !formData.telegram || !formData.about) {
       toast({
         title: "Ошибка",
@@ -60,7 +59,6 @@ const ApplicationForm = () => {
       return;
     }
     
-    // Submit form (simulated)
     setLoading(true);
     setTimeout(() => {
       toast({
@@ -69,7 +67,6 @@ const ApplicationForm = () => {
       });
       setLoading(false);
       
-      // Reset form
       setFormData({
         fullName: "",
         gender: "",
@@ -86,7 +83,6 @@ const ApplicationForm = () => {
 
   return (
     <section id="form" className="py-20 text-light relative">
-      {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/80 z-10"></div>
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -174,7 +170,7 @@ const ApplicationForm = () => {
                     type="file"
                     accept="image/*"
                     onChange={handleFileChange}
-                    className="bg-dark/60 border-gold/30 text-white mt-1 file:bg-[#FFD700] file:text-dark file:border-0 file:rounded-md file:px-2 file:py-1 file:mr-2 file:text-sm file:overflow-hidden file:whitespace-nowrap file:max-w-[120px] file:truncate hover:file:bg-[#FEF7CD]"
+                    className="bg-dark/60 border-gold/30 text-white mt-1 file:bg-[#FFD700] file:text-dark file:border-0 file:rounded-md file:px-2 file:py-1 file:mr-2 file:text-sm file:overflow-hidden file:whitespace-nowrap file:max-w-[100px] file:truncate hover:file:bg-[#FEF7CD]"
                     required
                   />
                 </div>
