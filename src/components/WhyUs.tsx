@@ -1,10 +1,5 @@
+
 import React, { useEffect, useRef } from "react";
-import { CountUp } from 'countup.js';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 
 const reasonsData = [
   {
@@ -32,87 +27,67 @@ const reasonsData = [
 const statsData = [
   {
     icon: "👩‍🦱",
-    value: 1890,
-    text: "девушек уже работают с нами",
-    isAnimated: true,
-    suffix: "+"
+    value: "1890+",
+    text: "девушек уже работают с нами"
   },
   {
     icon: "💸",
-    value: 65000000,
-    text: "выплачено с 2020 года",
-    isAnimated: true,
-    suffix: "₽+"
+    value: "65 000 000",
+    text: "выплачено с 2020 года"
   },
   {
     icon: "📈",
-    value: 98,
-    text: "остаются дольше 3 месяцев",
-    isAnimated: true,
-    suffix: "%"
+    value: "98%",
+    text: "остаются дольше 3 месяцев"
   },
   {
     icon: "📃",
-    text: "Работаем по договору",
-    isAnimated: false
+    value: "",
+    text: "Работаем по договору"
   },
   {
     icon: "🔐",
-    text: "Гарантируем полную защиту ваших персональных данных на всех этапах сотрудничества",
-    isAnimated: false
+    value: "",
+    text: "Гарантируем полную защиту ваших персональных данных на всех этапах сотрудничества"
   },
   {
     icon: "💬",
-    text: "Открытые условия, без скрытых комиссий",
-    isAnimated: false
+    value: "",
+    text: "Открытые условия, без скрытых комиссий"
   }
 ];
 
 const WhyUs = () => {
   const statsRef = useRef<HTMLDivElement>(null);
-  const countersInitialized = useRef<boolean>(false);
+  const animatedRefs = useRef<Map<HTMLElement, boolean>>(new Map());
 
-  const initCounters = () => {
-    if (!statsRef.current || countersInitialized.current) return;
-
-    const options = {
-      duration: 2,
-      useGrouping: true,
-    };
-
-    statsData.forEach((stat, index) => {
-      if (!stat.isAnimated || !stat.value) return;
-
-      const element = statsRef.current?.querySelector(`#counter-${index}`);
-      if (!element) return;
-
-      new CountUp(element as HTMLElement, stat.value, {
-        ...options,
-        suffix: stat.suffix,
-      }).start();
+  const checkScroll = () => {
+    if (!statsRef.current) return;
+    
+    const elements = statsRef.current.querySelectorAll('.stat-item');
+    
+    elements.forEach((element) => {
+      const el = element as HTMLElement;
+      if (animatedRefs.current.get(el)) return;
+      
+      const rect = el.getBoundingClientRect();
+      const isInView = rect.top <= window.innerHeight * 0.8;
+      
+      if (isInView) {
+        el.classList.add('animate-in');
+        animatedRefs.current.set(el, true);
+      }
     });
-
-    countersInitialized.current = true;
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            initCounters();
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
-    return () => observer.disconnect();
+    window.addEventListener('scroll', checkScroll);
+    // Initial check
+    setTimeout(checkScroll, 100);
+    
+    return () => {
+      window.removeEventListener('scroll', checkScroll);
+    };
   }, []);
 
   return (
@@ -120,60 +95,35 @@ const WhyUs = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Почему выбирают нас</h2>
         
-        <div className="mb-20">
-          <Carousel className="w-full max-w-6xl mx-auto">
-            <CarouselContent className="flex items-stretch -ml-2 md:-ml-4">
-              {reasonsData.map((reason, index) => (
-                <CarouselItem 
-                  key={index} 
-                  className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3 flex"
-                >
-                  <div className="text-center p-8 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] flex flex-col justify-between w-full">
-                    <div className="text-6xl mb-6">{reason.emoji}</div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-white">{reason.title}</h3>
-                      <p className="text-white/80 text-lg">{reason.description}</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {reasonsData.map((reason, index) => (
+            <div key={index} className="text-center p-6 border border-gold/20 rounded-lg hover:border-gold/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
+              <div className="text-5xl mb-4">{reason.emoji}</div>
+              <h3 className="text-xl font-bold mb-2 text-white">{reason.title}</h3>
+              <p className="text-white/80">{reason.description}</p>
+            </div>
+          ))}
         </div>
         
         <div className="mt-24">
           <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Почему нам доверяют</h2>
           
-          <div ref={statsRef} className="max-w-7xl mx-auto">
-            <Carousel className="w-full">
-              <CarouselContent className="flex items-stretch -ml-2 md:-ml-4">
-                {statsData.map((stat, index) => (
-                  <CarouselItem 
-                    key={index} 
-                    className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
-                  >
-                    <div className="flex items-center gap-6 p-6">
-                      <div className="text-5xl">{stat.icon}</div>
-                      <div className="text-left flex-1">
-                        {stat.isAnimated ? (
-                          <>
-                            <div className="flex items-baseline gap-2">
-                              <span id={`counter-${index}`} className="text-2xl font-bold text-gold">
-                                0
-                              </span>
-                              {stat.suffix && <span className="text-gold text-xl">{stat.suffix}</span>}
-                            </div>
-                            <p className="text-white/80 mt-2 text-lg">{stat.text}</p>
-                          </>
-                        ) : (
-                          <p className="text-white/80 text-lg">{stat.text}</p>
-                        )}
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
+          <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+            {statsData.map((stat, index) => (
+              <div key={index} className="stat-item flex items-center justify-center opacity-0 transition-all duration-700 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] p-4 rounded-lg" style={{ transitionDelay: `${index * 150}ms` }}>
+                <div className="text-4xl mr-4">{stat.icon}</div>
+                <div className="flex-1">
+                  <div className="flex items-baseline justify-center">
+                    {stat.value ? (
+                      <span className="text-2xl font-bold text-gold mr-1">
+                        {index === 1 ? `${stat.value}+ ₽` : stat.value}
+                      </span>
+                    ) : null}
+                    <span className="text-lg text-center">{stat.text}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
