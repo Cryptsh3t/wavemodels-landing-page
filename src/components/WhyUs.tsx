@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
+import { CountUp } from 'countup.js';
 
 const reasonsData = [
   {
@@ -27,67 +28,87 @@ const reasonsData = [
 const statsData = [
   {
     icon: "👩‍🦱",
-    value: "1890+",
-    text: "девушек уже работают с нами"
+    value: 1890,
+    text: "девушек уже работают с нами",
+    isAnimated: true,
+    suffix: "+"
   },
   {
     icon: "💸",
-    value: "65 000 000",
-    text: "выплачено с 2020 года"
+    value: 65000000,
+    text: "выплачено с 2020 года",
+    isAnimated: true,
+    suffix: "₽+"
   },
   {
     icon: "📈",
-    value: "98%",
-    text: "остаются дольше 3 месяцев"
+    value: 98,
+    text: "остаются дольше 3 месяцев",
+    isAnimated: true,
+    suffix: "%"
   },
   {
     icon: "📃",
-    value: "",
-    text: "Работаем по договору"
+    text: "Работаем по договору",
+    isAnimated: false
   },
   {
     icon: "🔐",
-    value: "",
-    text: "Гарантируем полную защиту ваших персональных данных на всех этапах сотрудничества"
+    text: "Гарантируем полную защиту ваших персональных данных на всех этапах сотрудничества",
+    isAnimated: false
   },
   {
     icon: "💬",
-    value: "",
-    text: "Открытые условия, без скрытых комиссий"
+    text: "Открытые условия, без скрытых комиссий",
+    isAnimated: false
   }
 ];
 
 const WhyUs = () => {
   const statsRef = useRef<HTMLDivElement>(null);
-  const animatedRefs = useRef<Map<HTMLElement, boolean>>(new Map());
+  const countersInitialized = useRef<boolean>(false);
 
-  const checkScroll = () => {
-    if (!statsRef.current) return;
-    
-    const elements = statsRef.current.querySelectorAll('.stat-item');
-    
-    elements.forEach((element) => {
-      const el = element as HTMLElement;
-      if (animatedRefs.current.get(el)) return;
-      
-      const rect = el.getBoundingClientRect();
-      const isInView = rect.top <= window.innerHeight * 0.8;
-      
-      if (isInView) {
-        el.classList.add('animate-in');
-        animatedRefs.current.set(el, true);
-      }
+  const initCounters = () => {
+    if (!statsRef.current || countersInitialized.current) return;
+
+    const options = {
+      duration: 2,
+      useGrouping: true,
+    };
+
+    statsData.forEach((stat, index) => {
+      if (!stat.isAnimated || !stat.value) return;
+
+      const element = statsRef.current?.querySelector(`#counter-${index}`);
+      if (!element) return;
+
+      new CountUp(element as HTMLElement, stat.value, {
+        ...options,
+        suffix: stat.suffix,
+      }).start();
     });
+
+    countersInitialized.current = true;
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', checkScroll);
-    // Initial check
-    setTimeout(checkScroll, 100);
-    
-    return () => {
-      window.removeEventListener('scroll', checkScroll);
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            initCounters();
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -108,19 +129,17 @@ const WhyUs = () => {
         <div className="mt-24">
           <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Почему нам доверяют</h2>
           
-          <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+          <div ref={statsRef} className="flex items-center justify-between flex-nowrap space-x-4 overflow-x-auto pb-4">
             {statsData.map((stat, index) => (
-              <div key={index} className="stat-item flex items-center justify-center opacity-0 transition-all duration-700 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] p-4 rounded-lg" style={{ transitionDelay: `${index * 150}ms` }}>
-                <div className="text-4xl mr-4">{stat.icon}</div>
-                <div className="flex-1">
-                  <div className="flex items-baseline justify-center">
-                    {stat.value ? (
-                      <span className="text-2xl font-bold text-gold mr-1">
-                        {index === 1 ? `${stat.value}+ ₽` : stat.value}
-                      </span>
-                    ) : null}
-                    <span className="text-lg text-center">{stat.text}</span>
-                  </div>
+              <div key={index} className="flex items-center whitespace-nowrap flex-shrink-0 bg-dark/50 px-4 py-3 rounded-lg hover:bg-dark/60 transition-colors">
+                <span className="text-3xl mr-3">{stat.icon}</span>
+                <div className="flex items-baseline">
+                  {stat.isAnimated && (
+                    <span id={`counter-${index}`} className="text-xl font-bold text-gold mr-1">
+                      0
+                    </span>
+                  )}
+                  <span className="text-sm">{stat.text}</span>
                 </div>
               </div>
             ))}
