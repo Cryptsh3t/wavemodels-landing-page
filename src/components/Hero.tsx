@@ -13,10 +13,10 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="relative w-full h-full">
           <div style={{ 
-            padding: "56.25% 0 0 0", 
             position: "relative",
-            height: isMobile ? "100vh" : "auto",
-            transform: isMobile ? "scale(1.5)" : "none"
+            width: "100%",
+            height: "100vh",
+            overflow: "hidden"
           }}>
             <iframe
               src="https://player.vimeo.com/video/1076567933?h=50789be209&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
@@ -24,11 +24,14 @@ const Hero = () => {
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
               style={{
                 position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: isMobile ? "cover" : "contain",
+                top: "50%",
+                left: "50%",
+                width: isMobile ? "auto" : "100vw",
+                height: isMobile ? "100vh" : "56.25vw",
+                minHeight: "100vh",
+                minWidth: "177.77vh",
+                transform: "translate(-50%, -50%)",
+                objectFit: "cover",
               }}
               title="WAVEMODELS Background"
             ></iframe>
