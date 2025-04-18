@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -83,41 +82,32 @@ const ApplicationForm = () => {
   };
 
   return (
-    <section id="form" className="relative h-screen w-full overflow-hidden bg-dark text-light">
-      {/* Video Background with Overlay */}
+    <section id="form" className="py-20 text-light relative">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <div className="relative w-full h-full">
-          <div style={{ 
-            position: "relative",
-            width: "100%",
-            height: "100vh",
-            overflow: "hidden"
-          }}>
-            <iframe
-              src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                width: "100vw",
-                height: "56.25vw",
-                minHeight: "100vh",
-                minWidth: "177.77vh",
-                transform: "translate(-50%, -50%)",
-              }}
-              title="WAVEMODELS Background"
-            ></iframe>
-          </div>
+        <div className="absolute inset-0 bg-black/80 z-10"></div>
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <iframe
+            src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "150%",
+              height: "150%",
+              transform: "translate(-50%, -50%)",
+              objectFit: "cover",
+            }}
+            title="WAVEMODELS Background"
+          ></iframe>
         </div>
       </div>
-
-      {/* Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 py-16">
-        <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gold">Анкета</h2>
-        <div className="max-w-3xl w-full mx-auto">
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-gold text-3xl md:text-4xl font-bold mb-10 text-center">Анкета</h2>
+          
           <div className="bg-dark/80 backdrop-blur-sm p-8 rounded-lg border border-gold/30">
             <form onSubmit={handleSubmit}>
               <div className="space-y-6">

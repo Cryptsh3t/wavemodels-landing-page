@@ -120,8 +120,9 @@ const Stories = () => {
         <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Истории успеха</h2>
         
         <div className="max-w-5xl mx-auto relative">
+          {/* Main Stories Slider */}
           <div 
-            className="relative min-h-[600px] md:min-h-[400px] overflow-hidden rounded-xl bg-black/50 border border-gold/20"
+            className="relative min-h-[420px] overflow-hidden rounded-xl bg-black/50 border border-gold/20"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -130,7 +131,7 @@ const Stories = () => {
             {STORIES_DATA.map((story, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 flex flex-col md:flex-row items-center transition-all duration-700 ease-in-out ${
+                className={`absolute inset-0 flex flex-col md:flex-row transition-all duration-700 ease-in-out ${
                   activeIndex === index 
                     ? "opacity-100 translate-x-0" 
                     : activeIndex > index 
@@ -138,20 +139,20 @@ const Stories = () => {
                       : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="w-full md:w-1/2 h-72 md:h-[400px]">
+                <div className="md:w-1/3 h-64 md:h-auto">
                   <img 
                     src={story.image} 
                     alt={`${story.name} from ${story.city}`} 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="w-full md:w-1/2 p-6 md:p-8">
-                  <p className="text-lg md:text-xl mb-6 italic">"{story.quote}"</p>
+                <div className="md:w-2/3 p-8 flex flex-col justify-center">
+                  <p className="text-xl mb-6 italic">"{story.quote}"</p>
                   <div className="space-y-2">
-                    <h3 className="text-base md:text-lg font-semibold">
+                    <h3 className="text-lg font-semibold">
                       {story.name}, {story.age}, {story.city}
                     </h3>
-                    <p className="text-gold font-bold flex items-center text-base md:text-lg">
+                    <p className="text-gold font-bold flex items-center">
                       <span className="mr-2">💼</span>
                       {story.income}
                     </p>
@@ -161,6 +162,7 @@ const Stories = () => {
             ))}
           </div>
           
+          {/* Navigation */}
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between z-10 px-4">
             <button
               onClick={handlePrev}
@@ -180,6 +182,7 @@ const Stories = () => {
             </button>
           </div>
           
+          {/* Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {STORIES_DATA.map((_, index) => (
               <button

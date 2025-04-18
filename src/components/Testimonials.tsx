@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 
 const TESTIMONIALS_DATA = [
@@ -79,11 +80,12 @@ const Testimonials = () => {
         <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Отзывы</h2>
         
         <div className="max-w-5xl mx-auto relative">
-          <div className="relative min-h-[500px] md:min-h-[400px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
+          {/* Main Testimonial Slider */}
+          <div className="relative min-h-[380px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
             {TESTIMONIALS_DATA.map((testimonial, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 flex flex-col md:flex-row items-center transition-all duration-700 ease-in-out ${
+                className={`absolute inset-0 flex flex-col md:flex-row transition-all duration-700 ease-in-out ${
                   activeIndex === index 
                     ? "opacity-100 translate-x-0" 
                     : activeIndex > index 
@@ -91,16 +93,16 @@ const Testimonials = () => {
                       : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="w-full md:w-1/2 h-72 md:h-[400px]">
+                <div className="md:w-1/3 h-64 md:h-auto">
                   <img 
                     src={testimonial.image} 
                     alt={`${testimonial.name} from ${testimonial.city}`} 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="w-full md:w-1/2 p-6 md:p-8">
-                  <p className="text-lg md:text-xl mb-6 italic">"{testimonial.text}"</p>
-                  <h3 className="text-base md:text-lg font-semibold">
+                <div className="md:w-2/3 p-8 flex flex-col justify-center">
+                  <p className="text-xl mb-6 italic">"{testimonial.text}"</p>
+                  <h3 className="text-lg font-semibold">
                     {testimonial.name}, {testimonial.age}, {testimonial.city}
                   </h3>
                 </div>
@@ -108,6 +110,7 @@ const Testimonials = () => {
             ))}
           </div>
           
+          {/* Navigation */}
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between z-10 px-4">
             <button
               onClick={handlePrev}
@@ -127,6 +130,7 @@ const Testimonials = () => {
             </button>
           </div>
           
+          {/* Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {TESTIMONIALS_DATA.map((_, index) => (
               <button
