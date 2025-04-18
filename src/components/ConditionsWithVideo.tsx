@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const ConditionsWithVideo = () => {
@@ -6,7 +7,7 @@ const ConditionsWithVideo = () => {
       {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/80 z-10"></div>
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <div className="absolute inset-0 w-full h-full overflow-hidden video-background">
           <iframe
             src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
             frameBorder="0"
@@ -15,8 +16,8 @@ const ConditionsWithVideo = () => {
               position: "absolute",
               top: "50%",
               left: "50%",
-              width: "150%",
-              height: "150%",
+              width: "100vw",
+              height: "100vh",
               transform: "translate(-50%, -50%)",
               objectFit: "cover",
             }}
@@ -72,8 +73,10 @@ const ConditionsWithVideo = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="#form" className="inline-block bg-gold hover:bg-gold/80 text-dark font-semibold py-3 px-8 rounded transition-all hover:shadow-[0_0_20px_5px_rgba(255,215,0,0.3)]">
-            Узнать больше
+          <a href="#form" className="inline-block">
+            <button className="mobile-optimized-button bg-gold hover:bg-gold/80 text-dark font-semibold rounded transition-all hover:shadow-[0_0_20px_5px_rgba(255,215,0,0.3)]">
+              Узнать больше
+            </button>
           </a>
         </div>
       </div>

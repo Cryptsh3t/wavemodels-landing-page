@@ -119,6 +119,11 @@
     background: #e6c200;
   }
   
+  .mobile-optimized-button {
+    @apply min-h-[48px] md:min-h-[56px] min-w-[44px] px-6 py-3 md:px-8 md:py-4;
+    margin: 12px 0;
+  }
+  
   .backdrop-blur {
     backdrop-filter: blur(8px);
   }
@@ -132,5 +137,20 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .video-background iframe {
+      width: auto !important;
+      height: 100vh !important;
+    }
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .video-background iframe {
+      width: 100vw !important;
+      height: auto !important;
+      min-height: 56.25vw !important;
+    }
   }
 }

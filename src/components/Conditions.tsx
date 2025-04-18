@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -37,7 +38,7 @@ const Conditions = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button className="bg-gold/90 hover:bg-gold text-dark text-lg py-6 px-8 font-semibold rounded-md transition-all duration-300 hover:scale-105">
+            <Button className="mobile-optimized-button bg-gold/90 hover:bg-gold text-dark text-lg font-semibold rounded-md transition-all duration-300 hover:scale-105">
               Узнать больше
             </Button>
           </div>
