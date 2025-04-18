@@ -5,37 +5,23 @@ const ConditionsWithVideo = () => {
     <section id="conditions" className="relative h-screen w-full overflow-hidden bg-dark text-light">
       {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
         <div className="relative w-full h-full">
-          <div style={{ 
-            position: "relative",
-            width: "100%",
-            height: "100vh",
-            overflow: "hidden"
-          }}>
-            <iframe
-              src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                width: "100vw",
-                height: "56.25vw",
-                minHeight: "100vh",
-                minWidth: "177.77vh",
-                transform: "translate(-50%, -50%)",
-              }}
-              title="WAVEMODELS Background"
-            ></iframe>
-          </div>
+          <iframe
+            src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            className="absolute inset-0 w-full h-full object-cover"
+            title="WAVEMODELS Background"
+          ></iframe>
         </div>
       </div>
 
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
-        <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gold">Условия сотрудничества</h2>
+        <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
+          Условия сотрудничества
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div className="bg-dark/80 backdrop-blur-sm p-8 rounded-lg border border-gold/30 transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)]">
             <div className="flex items-center mb-4">
@@ -79,7 +65,10 @@ const ConditionsWithVideo = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="#form" className="inline-block bg-gold hover:bg-gold/80 text-dark font-semibold py-3 px-8 rounded transition-all hover:shadow-[0_0_20px_5px_rgba(255,215,0,0.3)]">
+          <a 
+            href="#form" 
+            className="inline-block bg-gold/90 hover:bg-gold text-dark text-xl md:text-2xl font-semibold py-4 px-10 rounded-md transition-all duration-300 hover:scale-105 shadow-[0_4px_14px_rgba(0,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(255,215,0,0.5)]"
+          >
             Узнать больше
           </a>
         </div>
