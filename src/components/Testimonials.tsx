@@ -78,8 +78,9 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Отзывы</h2>
         
-        <div className="max-w-6xl mx-auto relative">
-          <div className="relative min-h-[680px] md:min-h-[600px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
+        <div className="max-w-5xl mx-auto relative">
+          {/* Main Testimonial Slider */}
+          <div className="relative min-h-[600px] md:min-h-[380px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
             {TESTIMONIALS_DATA.map((testimonial, index) => (
               <div
                 key={index}
@@ -91,14 +92,14 @@ const Testimonials = () => {
                       : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="h-[400px] md:w-1/2 md:h-[600px] relative">
+                <div className="h-72 md:w-1/3 md:h-auto">
                   <img 
                     src={testimonial.image} 
                     alt={`${testimonial.name} from ${testimonial.city}`} 
-                    className="w-full h-full object-contain bg-black/40"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-center bg-black/80">
+                <div className="md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                   <p className="text-lg md:text-xl mb-4 md:mb-6 italic">"{testimonial.text}"</p>
                   <h3 className="text-base md:text-lg font-semibold">
                     {testimonial.name}, {testimonial.age}, {testimonial.city}
@@ -108,7 +109,8 @@ const Testimonials = () => {
             ))}
           </div>
           
-          <div className="absolute top-[40%] md:top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between z-10 px-4">
+          {/* Navigation */}
+          <div className="absolute top-[35%] md:top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between z-10 px-4">
             <button
               onClick={handlePrev}
               className="bg-black/70 hover:bg-gold/90 transition-colors duration-300 rounded-full p-2 text-white hover:text-dark"
@@ -127,6 +129,7 @@ const Testimonials = () => {
             </button>
           </div>
           
+          {/* Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {TESTIMONIALS_DATA.map((_, index) => (
               <button
