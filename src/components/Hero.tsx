@@ -1,15 +1,23 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section className="relative h-screen w-full overflow-hidden bg-dark text-light">
       {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="relative w-full h-full">
-          <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+          <div style={{ 
+            padding: "56.25% 0 0 0", 
+            position: "relative",
+            height: isMobile ? "100vh" : "auto",
+            transform: isMobile ? "scale(1.5)" : "none"
+          }}>
             <iframe
               src="https://player.vimeo.com/video/1076567933?h=50789be209&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
               frameBorder="0"
@@ -20,6 +28,7 @@ const Hero = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
+                objectFit: isMobile ? "cover" : "contain",
               }}
               title="WAVEMODELS Background"
             ></iframe>
