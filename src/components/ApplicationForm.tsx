@@ -85,7 +85,7 @@ const ApplicationForm = () => {
     <section id="form" className="py-20 text-light relative">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/80 z-10"></div>
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <div className="relative w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
             frameBorder="0"
@@ -94,8 +94,8 @@ const ApplicationForm = () => {
               position: "absolute",
               top: "50%",
               left: "50%",
-              width: "150%",
-              height: "150%",
+              width: "100vw",
+              height: "100%",
               transform: "translate(-50%, -50%)",
               objectFit: "cover",
             }}
