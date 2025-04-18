@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 const TESTIMONIALS_DATA = [
@@ -81,7 +80,7 @@ const Testimonials = () => {
         
         <div className="max-w-5xl mx-auto relative">
           {/* Main Testimonial Slider */}
-          <div className="relative min-h-[380px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
+          <div className="relative min-h-[600px] md:min-h-[380px] overflow-hidden rounded-xl bg-black/50 border border-gold/20">
             {TESTIMONIALS_DATA.map((testimonial, index) => (
               <div
                 key={index}
@@ -93,16 +92,16 @@ const Testimonials = () => {
                       : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="md:w-1/3 h-64 md:h-auto">
+                <div className="h-72 md:w-1/3 md:h-auto">
                   <img 
                     src={testimonial.image} 
                     alt={`${testimonial.name} from ${testimonial.city}`} 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="md:w-2/3 p-8 flex flex-col justify-center">
-                  <p className="text-xl mb-6 italic">"{testimonial.text}"</p>
-                  <h3 className="text-lg font-semibold">
+                <div className="md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
+                  <p className="text-lg md:text-xl mb-4 md:mb-6 italic">"{testimonial.text}"</p>
+                  <h3 className="text-base md:text-lg font-semibold">
                     {testimonial.name}, {testimonial.age}, {testimonial.city}
                   </h3>
                 </div>
@@ -111,7 +110,7 @@ const Testimonials = () => {
           </div>
           
           {/* Navigation */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between z-10 px-4">
+          <div className="absolute top-[35%] md:top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between z-10 px-4">
             <button
               onClick={handlePrev}
               className="bg-black/70 hover:bg-gold/90 transition-colors duration-300 rounded-full p-2 text-white hover:text-dark"
