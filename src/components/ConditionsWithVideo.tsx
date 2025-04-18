@@ -1,29 +1,25 @@
-
 import React from "react";
 
 const ConditionsWithVideo = () => {
   return (
     <section id="conditions" className="py-20 text-light relative">
       {/* Video Background with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-black/80 z-10"></div>
-        <div className="relative w-full h-full">
-          <iframe
-            src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              width: "100vw",
-              height: "100%",
-              transform: "translate(-50%, -50%)",
-              objectFit: "cover",
-            }}
-            title="WAVEMODELS Background"
-          ></iframe>
-        </div>
+        <iframe
+          src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          className="absolute w-full h-full object-cover"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+          title="WAVEMODELS Background"
+        ></iframe>
       </div>
 
       {/* Content */}
