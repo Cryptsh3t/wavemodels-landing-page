@@ -120,9 +120,9 @@ const Stories = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-gold text-3xl md:text-4xl font-bold mb-16 text-center">Истории успеха</h2>
         
-        <div className="max-w-5xl mx-auto relative">
+        <div className="max-w-6xl mx-auto relative">
           <div 
-            className="relative min-h-[680px] md:min-h-[480px] overflow-hidden rounded-xl bg-black/50 border border-gold/20"
+            className="relative min-h-[680px] md:min-h-[600px] overflow-hidden rounded-xl bg-black/50 border border-gold/20"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -139,14 +139,14 @@ const Stories = () => {
                       : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="h-[300px] md:w-1/2 md:h-[480px]">
+                <div className="h-[400px] md:w-1/2 md:h-[600px] relative">
                   <img 
                     src={story.image} 
                     alt={`${story.name} from ${story.city}`} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-black/40"
                   />
                 </div>
-                <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-center bg-black/80">
                   <p className="text-lg md:text-xl mb-4 md:mb-6 italic">"{story.quote}"</p>
                   <div className="space-y-2">
                     <h3 className="text-base md:text-lg font-semibold">
