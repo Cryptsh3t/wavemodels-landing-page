@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 
 const STORIES_DATA = [
@@ -121,7 +122,7 @@ const Stories = () => {
         
         <div className="max-w-5xl mx-auto relative">
           <div 
-            className="relative min-h-[680px] md:min-h-[420px] overflow-hidden rounded-xl bg-black/50 border border-gold/20"
+            className="relative min-h-[680px] md:min-h-[480px] overflow-hidden rounded-xl bg-black/50 border border-gold/20"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -138,14 +139,14 @@ const Stories = () => {
                       : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="h-80 md:w-1/3 md:h-auto">
+                <div className="h-[300px] md:w-1/2 md:h-[480px]">
                   <img 
                     src={story.image} 
                     alt={`${story.name} from ${story.city}`} 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
+                <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
                   <p className="text-lg md:text-xl mb-4 md:mb-6 italic">"{story.quote}"</p>
                   <div className="space-y-2">
                     <h3 className="text-base md:text-lg font-semibold">
