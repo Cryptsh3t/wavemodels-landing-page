@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 
 const STORIES_DATA = [
@@ -48,7 +47,7 @@ const STORIES_DATA = [
     city: "Екатеринбург",
     income: "200 000 ₽/мес",
     quote: "Профессиональная команда, прозрачные условия для работы и хорошие своевременные выплаты - всё это WAVEMODELS.",
-    image: "https://images.pexels.com/photos/30698454/pexels-photo-30698454/free-photo-with-seashell-aesthetics.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://images.pexels.com/photos/17243576/pexels-photo-17243576/free-photo-of-a-woman-in-white-jeans-and-a-black-top.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     name: "София",

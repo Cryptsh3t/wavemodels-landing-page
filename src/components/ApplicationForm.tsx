@@ -87,7 +87,7 @@ const ApplicationForm = () => {
         <div className="absolute inset-0 bg-black/80 z-10"></div>
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <iframe
-            src="https://player.vimeo.com/video/1076259702?h=8f35914296&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
+            src="https://player.vimeo.com/video/1076574105?h=2d8230af06&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=1&background=1&muted=1"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
             style={{
