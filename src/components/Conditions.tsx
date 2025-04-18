@@ -14,7 +14,7 @@ const Conditions = () => {
             <div className="bg-dark/60 backdrop-blur-sm p-8 rounded-lg border border-gold/20 hover:border-gold/40 transition-all duration-300">
               <div className="text-gold text-4xl mb-4">💰</div>
               <h3 className="text-2xl font-semibold mb-3">Высокий доход</h3>
-              <p className="text-xl opacity-90">$800/мес</p>
+              <p className="text-xl opacity-90">от 60 000 ₽/мес до 400 000 ₽+</p>
             </div>
             
             <div className="bg-dark/60 backdrop-blur-sm p-8 rounded-lg border border-gold/20 hover:border-gold/40 transition-all duration-300">
